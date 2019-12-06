@@ -10,7 +10,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello World")
+        VStack {
+            Image(decorative: "panda-4418773_640")
+                .accessibility(hidden: true)
+            Text("Your score is")
+            Text("1000")
+                .font(.title)
+        }
+        //.accessibilityElement(children: .combine)
+        .accessibilityElement(children: .ignore)
+        .accessibility(label: Text("Your score is 1000"))
     }
 }
 
